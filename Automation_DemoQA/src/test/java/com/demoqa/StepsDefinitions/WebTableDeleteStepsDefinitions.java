@@ -4,7 +4,6 @@ import com.demoqa.Tasks.*;
 import com.demoqa.UserInterfaces.HomePage;
 import com.demoqa.UserInterfaces.RegistrationForm;
 import com.demoqa.Utilities.Constants;
-import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -15,7 +14,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
-public class WebTableStepsDefinitions {
+public class WebTableDeleteStepsDefinitions {
     @Before
     public void setup(){
         setTheStage(new OnlineCast());
@@ -34,19 +33,5 @@ public class WebTableStepsDefinitions {
 
     @Then("^Se valida que el registro se elimino$")
     public void seValidaQueElRegistroSeElimino() {
-    }
-
-    @When("^Desea agregar un nuevo registro$")
-    public void deseaAgregarUnNuevoRegistro() {
-        theActorInTheSpotlight().attemptsTo(AddRecord.addRecord());
-    }
-
-    @And("^Ingresa nombre de usuario \"([^\"]*)\" \"([^\"]*)\", Email \"([^\"]*)\", Edad \"([^\"]*)\",Salario \"([^\"]*)\"  y departamento \"([^\"]*)\"$")
-    public void ingresaNombreDeUsuarioEmailEdadSalarioYDepartamento(String fname, String lname, String mail, String age, String salary, String department) throws Throwable {
-        theActorInTheSpotlight().attemptsTo(Registration.en(fname,lname,mail,age,salary,department, RegistrationForm.FIRST_NAME,RegistrationForm.LAST_NAME,RegistrationForm.EMAIL,RegistrationForm.AGE,RegistrationForm.SALARY,RegistrationForm.DEPARTMENT,RegistrationForm.BTN_SUBMIT));
-    }
-
-    @Then("^Se valida que el registro se agrego$")
-    public void seValidaQueElRegistroSeAgrego() {
     }
 }
