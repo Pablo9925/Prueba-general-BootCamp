@@ -7,13 +7,13 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.MoveMouse;
 
-public class DeleteRegister implements Task{
+public class AddRecord implements Task{
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(MoveMouse.to(WebTables.DELETE), Click.on(WebTables.DELETE));
+        actor.attemptsTo(MoveMouse.to(WebTables.ADD), Click.on(WebTables.ADD));
     }
 
-    public static DeleteRegister deleteRegister(){
-        return Tasks.instrumented(DeleteRegister.class);
+    public static AddRecord addRecord(){
+        return Tasks.instrumented(AddRecord.class);
     }
 }

@@ -1,6 +1,6 @@
 package com.demoqa.Utilities;
 
-public class Constanst {
+public class Constants {
 
     public static final String ACTOR_NAME = "Usuario";
 
