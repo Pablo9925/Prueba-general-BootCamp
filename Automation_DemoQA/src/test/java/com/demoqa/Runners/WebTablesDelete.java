@@ -10,8 +10,7 @@ import org.junit.runner.RunWith;
         glue = "com.demoqa.StepsDefinitions",
         features = "src/test/resources/Features/web_tables_delete.feature",
         snippets = SnippetType.CAMELCASE,
-        monochrome = true,
-        dryRun = false
+        monochrome = true
 )
 
 public class WebTablesDelete {

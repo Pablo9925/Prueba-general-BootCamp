@@ -31,7 +31,4 @@ public class WebTableDeleteStepsDefinitions {
        theActorInTheSpotlight().attemptsTo(DeleteRecord.deleteRegister());
     }
 
-    @Then("^Se valida que el registro se elimino$")
-    public void seValidaQueElRegistroSeElimino() {
-    }
 }
